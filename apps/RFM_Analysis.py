@@ -8,7 +8,7 @@ def app():
         st.markdown("<h1 style='text-align: center; color: #a711b7;'>RFM Analysis</h1><br>", unsafe_allow_html=True)
 
         #Making this app read the agg file that has the cluster names and their fields
-        df_agg = pd.read_csv(r'C:\Users\itm\Desktop\Multipage\apps\Cluster_data.csv')
+        df_agg = pd.read_csv(r'data/Cluster_data.csv')
         
         #Preparing the bar graph for the clusters' Monetary mean
         fig_mon = px.bar(df_agg, x="Cluster_name", y="MonetaryMean")
