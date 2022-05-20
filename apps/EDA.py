@@ -24,7 +24,7 @@ def app():
           
           df['Sales'] = df['Quantity'] * df['UnitPrice'] # Calculate total sales
 
-          st.dataframe(df) #show the dataframe
+          st.dataframe(df.head()) #show the dataframe
 
           observations = df.shape[0] #getting the number of rows
 
