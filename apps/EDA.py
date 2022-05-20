@@ -9,7 +9,7 @@ import os
 
 def app():
          st.markdown("<h1 style='text-align: center; color: #a711b7;'>Explore Your Data</h1><br>", unsafe_allow_html=True)
-         if 'main_data.csv' not in os.listdir(r'C:\Users\itm\Desktop\Multipage\apps'): #if data is not uploaded we have to set a warning message.
+           if 'main_data.csv' not in os.listdir('data'):: #if data is not uploaded we have to set a warning message.
             st.warning("Please upload your data through the Home page.") # the warning message.
          else: # if the data is uploaded, we will proceed forward.
           global df
