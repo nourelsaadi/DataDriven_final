@@ -7,7 +7,7 @@ def app():
         #Title of this App/page
         st.markdown("<h1 style='text-align: center; color: #a711b7;'>Customer Breakdown</h1><br>", unsafe_allow_html=True)
         #To carry the data to this app, the file that has the cluster names and the corresponding values are read from the Cluster_data csv file in the folder
-        df_agg = pd.read_csv(r'C:\Users\itm\Desktop\Multipage\apps\Cluster_data.csv')
+        df_agg = pd.read_csv(r'data/Cluster_data.csv')
         #putting the cluster names in a list 
         customer_list = [i for i in df_agg["Cluster_name"]]
         #splitting the page
