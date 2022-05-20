@@ -1,8 +1,6 @@
 import streamlit as st
 from multiapp import MultiApp
 from apps import Home, EDA, RFM_Analysis, Clustering_Customers, Customer_Breakdown, Recommendations # import your app modules here
-import os
-import base64
 st.set_page_config(layout="wide")
 app = MultiApp()
 
