@@ -42,7 +42,7 @@ def app():
           y = df["CustomerID"].unique() #setting the unique customers
           u_cust = len(y) # getting the number of unique customers and putting it into a variable
 
-          df.to_csv(r'C:\Users\itm\Desktop\Multipage\apps\main_data.csv', index=False)
+          df.to_csv(r'data/main_data.csv', index=False)
           col1,col2,col3=st.columns([0.33,0.33,0.33]) #splitting the page into 3 columns
           with col1:
              st.write("Observations' Count:", observations)  #printing the number of observations
