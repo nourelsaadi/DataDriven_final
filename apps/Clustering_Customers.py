@@ -11,7 +11,7 @@ def app():
    #Title of this App/page
     st.markdown("<h1 style='text-align: center; color: #a711b7;'>Clustering Customers with RFM analysis</h1><br>", unsafe_allow_html=True)
     #Reading the data (it is a multiapp, this was the only known method for the time being (that actually worked). Loaded the data from the main_data csv file that was generated and added to the folder
-    df = pd.read_csv(r'C:\Users\itm\Desktop\Multipage\apps\main_data.csv')
+    df = pd.read_csv(r'data/main_data.csv')
     
     df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"])
     # Group data by customerID
@@ -68,7 +68,7 @@ def app():
     data_process['Cluster_name'] = data_process['Cluster_name'].map(labels_dict)
     
     #to carry the resulting aggregated data into the other apps, a file was created into the folder
-    df_agg.to_csv(r'C:\Users\itm\Desktop\Multipage\apps\Cluster_data.csv', index=False)
+    df_agg.to_csv(r'data/Cluster_data.csv', index=False)
    
     #preparing the scatter plot that shows the distribution of customers based on recency & monetary value
     fig_clust = px.scatter(df_agg, x="RecencyMean", y="MonetaryMean", size = "FrequencyMean", color = "Cluster_name", hover_name ="Cluster_name", size_max = 100)
